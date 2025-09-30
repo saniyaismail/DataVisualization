@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+}
+h1, h2 {
+    text-align: center;
+}
+#controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+label, select, input, button {
+    margin: 5px;
+    padding: 8px;
+    font-size: 16px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+#visualization {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.hidden {
+    display: none;
+}

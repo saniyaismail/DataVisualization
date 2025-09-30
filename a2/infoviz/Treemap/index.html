@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Treemap Visualization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>Treemap Visualizations</h1>
+
+<div id="controls">
+    <label for="treemapDropdown">Select Treemap:</label>
+    <select id="treemapDropdown">
+        <option value="genreSubgenre">Genre and Subgenre Popularity</option>
+        <option value="yearArtist">Top 10 Artists by Year</option>
+        <option value="genreArtist">Top Artists by Genre and Track Count</option>
+    </select>
+    
+    <div id="yearRange" class="hidden">
+        <label for="startYear">Start Year:</label>
+        <input type="number" id="startYear" min="1950" max="2023" value="2010">
+        <label for="endYear">End Year:</label>
+        <input type="number" id="endYear" min="1950" max="2023" value="2020">
+    </div>
+
+    <label for="layoutDropdown">Treemap Layout:</label>
+    <select id="layoutDropdown">
+        <option value="squarify">Squarify</option>
+        <option value="slice">Slice</option>
+        <option value="dice">Dice</option>
+        <option value="slice-dice">Slice-Dice</option>
+    </select>
+
+    <label for="colorDropdown">Color Scheme:</label>
+    <select id="colorDropdown">
+        <option value="Viridis">Viridis</option>
+        <option value="Cividis">Cividis</option>
+        <option value="Plasma">Plasma</option>
+        <option value="Turbo">Turbo</option>
+        <option value="Bluered">Bluered</option>
+        <option value="YlGnBu">YlGnBu</option>
+        <option value="RdBu">RdBu</option>
+    </select>
+
+    <button onclick="updateVisualization()">Update</button>
+</div>
+
+<div id="visualization">
+    <div id="treemapContainer"></div>
+</div>
+
+
+    <script type="text/javascript" src="script.js"></script>
+
+
+</body>
+</html>
